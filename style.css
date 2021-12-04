@@ -1,0 +1,169 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+body[data-theme="light"] {
+  --color-1: #f1faee;
+  --color-2: #dda15e;
+  --color-3: #000;
+}
+body[data-theme="dark"] {
+  --color-1: rgb(47, 27, 27);
+  --color-2: #48cae4;
+  --color-3: #fff;
+}
+.container {
+  width: 100%;
+  height: 100vh;
+  background: var(--color-1);
+  overflow-y: hidden;
+}
+header {
+  width: 100%;
+  height: 40vh;
+  background: url(./bg.jpg) center/cover;
+  color: white;
+  text-align: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+.themeSwitch {
+  position: absolute;
+  right: 3rem;
+  top: 3rem;
+}
+.themeSwitch input {
+  visibility: hidden;
+  opacity: 0;
+}
+label {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 50px;
+  height: 26px;
+  cursor: pointer;
+}
+label i {
+  font-size: 1.4rem;
+}
+.fa-sun {
+  color: #f1c40f;
+}
+.fa-cloud-moon {
+  color: #dda15e;
+}
+.ball {
+  width: 25px;
+  height: 25px;
+  background: white;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 50%;
+  transition: 0.6s linear;
+}
+.themeSwitch input:checked + label .ball {
+  transform: translateX(25px);
+}
+.container-todo {
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+  margin: -5rem auto;
+  background: var(--color-2);
+  box-shadow: 0 0 10px var(--color-3);
+  z-index: 2;
+  height: 400px;
+  overflow: auto;
+}
+.clear {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: rgb(121, 82, 208);
+}
+.clear:hover {
+  transform: rotate(45deg);
+}
+#list {
+  width: 100%;
+  position: absolute;
+  top: 3rem;
+}
+.item {
+  margin: 10px 0;
+  width: 100%;
+  min-width: fit-content;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+.item i,
+p {
+  font-size: 2rem;
+}
+.text {
+  text-align: center;
+  margin: 0 20px;
+}
+.addToDo {
+  width: 90%;
+  max-width: 500px;
+  margin: 50px auto;
+  text-align: center;
+  padding: 1.4rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.complete {
+  color: rgb(0, 128, 0);
+  transition: 0.5s ease-in-out;
+}
+.complete:hover {
+  color: rgba(0, 128, 0, 0.476);
+  cursor: pointer;
+}
+.delete {
+  color: rgb(255, 0, 0);
+}
+.delete:hover {
+  color: rgba(255, 0, 0, 0.585);
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+.lineTrought {
+  text-decoration: line-through;
+  color: #ccc;
+}
+#input {
+  padding: 1rem 2.3rem;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 1.6rem;
+  width: 100%;
+  color: var(--color-3);
+}
+#input::placeholder {
+  text-transform: capitalize;
+  color: var(--color-3);
+}
+#plus {
+  font-size: 2rem;
+  margin-right: -30px;
+  z-index: 1;
+  position: relative;
+  cursor: pointer;
+  color: rgb(121, 82, 208);
+}

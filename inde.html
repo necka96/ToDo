@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>TODO</title>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+ integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+ <link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="light">
+ <div class="container">
+  <header>
+   <h1>TODO List</h1>
+   <h3 class="date"></h3>
+   <div class="themeSwitch">
+   <input type="checkbox" name="checkbox" id="chackbox">
+    <label for="chackbox">
+     <i class="far fa-sun"></i>
+     <i class="fas fa-cloud-moon"></i>
+     <div class="ball"></div>
+    </label>
+   </div>
+  </header>
+  <div class="container-todo">
+   <div class="clear">
+     <i class="fas fa-sync"></i>
+   </div>
+
+   <div class="content">
+   <ul id="list">
+     <!-- <li class="item">
+       <i class="far fa-check-circle complete" job="complete" id="0"></i>
+       <p class="text">Popij kafu</p>
+       <i class="fas fa-trash-alt delete" job="delete" id="0"></i>
+     </li> -->
+    </ul>
+   </div>
+  
+  </div>
+  <div class="addToDo">
+    <i class="fas fa-plus-circle" id="plus"></i>
+    <input type="text" id="input" placeholder="dodaj obavezu">
+  </div>
+ </div>
+ <script src="./main.js"></script>
+</body>
+</html>
